@@ -1,38 +1,116 @@
+*{
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
 .App {
   text-align: center;
+  margin: auto;
+  padding: 0;
+  border: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+h1{
+  font-size: 26pt;
+  border-radius: 12px;
+  background-color: rgb(150, 124, 51);
   color: white;
+  text-align: center;
+  padding: 25px;
 }
 
-.App-link {
-  color: #61dafb;
+label{
+  display: block;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: -29px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input{
+  width: 90%;
+  max-width: 800px;
+  margin: 10px auto;
+  padding: 8px;
+  border-radius:20px;
+  border: 2px solid rgb(150, 124, 51);
+  display: block;
 }
+
+input:focus{
+  border-color: rgb(212, 186, 114);
+  box-shadow: 0px 0px 8px rgb(190, 157, 66);
+}
+
+.button{
+  padding: 8px 16px;
+  margin: -1px auto;
+  border-radius: 8px;
+  background-color: rgb(93, 141, 230);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.button:hover{
+  background-color:rgb(64, 101, 170);
+}
+
+ul{
+  list-style-type:none;
+  text-align: left;
+  padding: 15px;
+  margin: 5px;
+  max-width: 1000px;
+  height: 100px;
+  display: flex;
+
+  flex-wrap: wrap;
+}
+
+li{
+  text-align: center;
+  padding: 12px;
+}
+
+img{
+  width: 91%;
+  max-width: 95%;
+  height: 94%;
+  border-radius: 14px;
+}
+
+.title{
+  font-size: 15.5px;
+  font-weight: bold;
+  margin: 5px;
+  padding: 6px;
+}
+
+.result-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3x3 grid */
+  gap: 20px;
+  justify-content: center;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 10px;
+}
+
+
+.result{
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in forwards;
+}
+
+@keyframes fadeIn{
+  from{opacity: 0;}
+  to{opacity: 1;}
+}
+
+.result:hover{
+  transform: scale(1.05);
+}
+
