@@ -38,7 +38,7 @@ function SearchMovie(){
             <input type="text"
              name="movie" 
              id='mov'
-             onKeyDown={keyDown} // detects enter
+             onKeyDown={keyDown} // detects ent
              value = {query}
              onChange={(e) => setQuery(e.target.value)}
              placeholder='Enter movie or TV show...'
