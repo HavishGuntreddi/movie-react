@@ -16,7 +16,7 @@ function SearchMovie(){
         }
 
         const response = await fetch(
-            `http://www.omdbapi.com/?apikey=d9897356&s=${query}`
+            `http://www.omdbapi.com/?apikey=[APIKEY]&s=${query}`
         );
 
         const data = await response.json();
